@@ -9,5 +9,5 @@ $(document).ready(function(){
             }
         });
     }
-    setInterval(load_data, 10000);
+    setInterval(load_data, 15000);
 });
