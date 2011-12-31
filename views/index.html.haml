@@ -1,6 +1,6 @@
 .row
   .span16
-    Statistics from Twitter.
+    Statistics from 100 Most Recent Tweets
     %br/
     %br/
 
@@ -9,9 +9,9 @@
         Language
       %th
         Count
-      - @stats.each do |k, v|
+      - @stats.each do |s|
         %tr
           %td
-            #{k}
+            #{s[0]}
           %td
-            #{v}
+            #{s[1]}
