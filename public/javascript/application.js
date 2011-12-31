@@ -5,10 +5,9 @@ $(document).ready(function(){
             url: '/stats',
             dataType: 'html',
             success: function(data) {
-                $('#stats').html(data);
-                
+              $('#stats').html(data);
             }
         });
     }
-    setTimeout(load_data, 10000);
+    setInterval(load_data, 10000);
 });
