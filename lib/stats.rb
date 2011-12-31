@@ -5,7 +5,7 @@ class Stats
           "objective-c", "obj-c", "perl", "javascript", "delphi", "lisp", "sql", "pascal", "ada",
           "logo", "assembly", "abap", "clojure", "scheme", "lua", "matlab", "rpg", "bash", "fortran", "erlang",
           "scratch", "prolog", "go", "f#", "cobol", "d", "forth", "r", "haskell", "apl", "tcl", "ml", "sas",
-          "octive", "scala", "coffeescript", "smalltalk"]
+          "octive", "scala", "coffeescript", "smalltalk", "awk"]
 
   def self.totals
     @@totals ||= {}  
@@ -40,6 +40,7 @@ class Stats
   end
 
   def self.add_to_total(lang)
+    lang = "objective-c" if lang == "obj-c"
     if totals[lang]
       totals[lang] = totals[lang] + 1
     else
