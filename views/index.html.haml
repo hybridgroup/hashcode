@@ -3,20 +3,21 @@
     "What programming languages have you used this year? Tweet using #code2011"
     %br/
     %br/
+    #graph
+      %img{:src => Gchart.bar(:title => 'Languages From The Most Recent 100 Tweets', :size => '600x200', :theme => :greyscale, :data => @stats.collect{|s|s[1]})}
 
-    %img{:src => Gchart.bar(:title => 'Languages From The Most Recent 100 Tweets', :size => '600x200', :theme => :greyscale, :data => @stats.collect{|s|s[1]})}
-
-    %table.zebra-striped
-      %th
-        Language
-      %th
-        Count
-      - @stats.each do |s|
-        %tr
-          %td
-            #{s[0]}
-          %td
-            #{s[1]}
+    #tabledata
+      %table.zebra-striped
+        %th
+          Language
+        %th
+          Count
+        - @stats.each do |s|
+          %tr
+            %td
+              #{s[0]}
+            %td
+              #{s[1]}
   .span5.offset1
     %script{:type =>"text/javascript", :src => "http://widgets.twimg.com/j/2/widget.js"}
     :javascript
