@@ -5,7 +5,7 @@ class Stats
           "objective-c", "obj-c", "perl", "javascript", "delphi", "lisp", "sql", "pascal", "ada",
           "logo", "assembly", "abap", "clojure", "scheme", "lua", "matlab", "rpg", "bash", "fortran", "erlang",
           "scratch", "prolog", "go", "f#", "cobol", "d", "forth", "r", "haskell", "apl", "tcl", "ml", "sas",
-          "octive", "scala", "coffeescript"]
+          "octive", "scala", "coffeescript", "smalltalk"]
 
   def self.totals
     @@totals ||= {}  
