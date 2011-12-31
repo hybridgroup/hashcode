@@ -4,7 +4,7 @@
     %br/
     %br/
 
-    %img{:src => Gchart.bar(:size => '600x200', :theme => :keynote, :data => @stats.collect{|s|s[1]})}
+    %img{:src => Gchart.bar(:title => 'Languages From The Most Recent 100 Tweets', :size => '600x200', :theme => :greyscale, :data => @stats.collect{|s|s[1]})}
 
     %table.zebra-striped
       %th
