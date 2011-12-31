@@ -3,8 +3,8 @@ require 'twitter'
 class Stats
   LANGS = ["c", "c#", "c++", "basic", "ruby", "python", "php", "java", "delphi",
           "objective-c", "obj-c", "perl", "javascript", "delphi", "lisp", "sql", "pascal", "ada",
-          "logo", "assembly", "abap", "clojure", "scheme", "lua", "bash", "fortran", "erlang",
-          "scratch", "prolog", "go", "f#", "cobol", "d", "forth", "r", "haskell", "apl", "tcl", "ml",
+          "logo", "assembly", "abap", "clojure", "scheme", "lua", "matlab", "rpg", "bash", "fortran", "erlang",
+          "scratch", "prolog", "go", "f#", "cobol", "d", "forth", "r", "haskell", "apl", "tcl", "ml", "sas",
           "octive"]
 
   def self.totals
