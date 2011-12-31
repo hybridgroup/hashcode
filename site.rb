@@ -18,6 +18,6 @@ end
 
 get "/stats" do
   @stats = Stats.get_totals
-  haml :'stats.html'
+  haml :'stats.html', :layout => :false
 end
 
