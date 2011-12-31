@@ -35,7 +35,7 @@ class Stats
   # return array of languages
   def self.get_totals_for_tweet(t)
     LANGS.each do |lang|
-      self.add_to_total(lang) if t.text.match(/(\s|\b|,)#{lang}(\s|\b|,|$)/i)
+      self.add_to_total(lang) if t.text.match(/(\s|\b|,)#{lang}(\s|,|$)/i)
     end
   end
 
