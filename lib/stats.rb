@@ -11,9 +11,14 @@ class Stats
     @@totals ||= {}  
   end
 
+  def self.clear_totals
+    @@totals = {}
+  end
+
   def self.get_totals
+    clear_totals
     Twitter.search("#code2011", :rpp => 100).each do |t|
-      self.get_totals_for_tweet(t)
+      get_totals_for_tweet(t)
     end
     totals.sort_by {|lang, total| total}.reverse
   end

@@ -2,6 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 require 'sass'
+require 'gchart'
 
 require File.expand_path(File.dirname(__FILE__) + "/lib/stats")
 
