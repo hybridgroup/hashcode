@@ -1,2 +1,17 @@
-- @stats.each do |k, v|
-  %p== #{k} #{v}
+.row
+  .span16
+    Statistics from Twitter.
+    %br/
+    %br/
+
+    %table.zebra-striped
+      %th
+        Language
+      %th
+        Count
+      - @stats.each do |k, v|
+        %tr
+          %td
+            #{k}
+          %td
+            #{v}
