@@ -1,5 +1,5 @@
 .row
-  .span16
+  .span10
     "What programming languages have you used this year? Tweet using #code2011"
     %br/
     %br/
@@ -17,34 +17,34 @@
             #{s[0]}
           %td
             #{s[1]}
-
-%script{:type =>"text/javascript", :src => "http://widgets.twimg.com/j/2/widget.js"}
-:javascript
-  new TWTR.Widget({
-   version: 2,
-   type: 'search',
-   search: 'code2011',
-   interval: 30000,
-   title: '#code2011',
-   subject: '',
-   width: 250,
-   height: 600,
-   theme: {
-     shell: {
-       background: '#000000',
-       color: '#ffffff'
-     },
-     tweets: {
-       background: '#ffffff',
-       color: '#444444',
-       links: '#1985b5'
-     }
-   },
-   features: {
-     scrollbar: true,
-     loop: true,
-     live: true,
-     behavior: 'default'
-   }
-  }).render().start();
+  .span5.offset1
+    %script{:type =>"text/javascript", :src => "http://widgets.twimg.com/j/2/widget.js"}
+    :javascript
+      new TWTR.Widget({
+       version: 2,
+       type: 'search',
+       search: 'code2011',
+       interval: 30000,
+       title: '#code2011',
+       subject: '',
+       width: 280,
+       height: 600,
+       theme: {
+         shell: {
+           background: '#000000',
+           color: '#ffffff'
+         },
+         tweets: {
+           background: '#ffffff',
+           color: '#444444',
+           links: '#1985b5'
+         }
+       },
+       features: {
+         scrollbar: true,
+         loop: true,
+         live: true,
+         behavior: 'default'
+       }
+      }).render().start();
 
