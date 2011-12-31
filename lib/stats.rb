@@ -12,10 +12,10 @@ class Stats
   end
 
   def self.get_totals
-    Twitter.search("#code2011", :rpp => 10).each do |t|
+    Twitter.search("#code2011", :rpp => 100).each do |t|
       self.get_totals_for_tweet(t)
     end
-    totals
+    totals.sort_by {|lang, total| total}.reverse
   end
 
   # return array of languages

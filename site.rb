@@ -6,7 +6,7 @@ require 'sass'
 require File.expand_path(File.dirname(__FILE__) + "/lib/stats")
 
 get "/" do
-  #@feeds ||= BlogFeed.get.first(5)
+  @stats = Stats.get_totals
   haml :'index.html'
 end
 
