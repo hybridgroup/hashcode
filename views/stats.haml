@@ -2,15 +2,11 @@
 
 #tabledata
   %table.zebra-striped
-    %th
-      Language
-    %th
-      Count
+    %th Language
+    %th Count
     - @stats.each do |s|
       %tr
         %td
           #{s[0]}
         %td
           #{s[1]}
-
-

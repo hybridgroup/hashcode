@@ -1,10 +1,11 @@
 require 'rubygems'
-require 'sinatra'
-require 'haml'
-require 'twitter'
+require 'bundler'
+Bundler.require(:default)
 
-# load main
-load File.join(File.dirname(__FILE__), 'site.rb')
+Sass::Plugin.options[:style] = :compressed
+use Sass::Plugin::Rack
+
+require './site'
+require './lib/stats'
 
 run Sinatra::Application
-
