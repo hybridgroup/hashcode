@@ -7,4 +7,3 @@ require 'twitter'
 load File.join(File.dirname(__FILE__), 'site.rb')
 
 run Sinatra::Application
-
