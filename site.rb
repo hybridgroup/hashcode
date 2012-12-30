@@ -1,9 +1,9 @@
 get "/" do
   @stats = Stats.get_totals
-  haml :'index.html'
+  haml :index
 end
 
 get "/stats" do
   @stats = Stats.get_totals
-  haml :'stats.html', :layout => false
+  haml :stats, :layout => false
 end
