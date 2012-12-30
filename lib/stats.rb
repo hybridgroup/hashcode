@@ -1,14 +1,14 @@
 require 'twitter'
 
 class Stats
-  LANGS = ["c", "c#", "c\+\+", "basic", "ruby", "python", "php", "java", "delphi",
-          "objective-c", "obj-c", "perl", "javascript", "delphi", "lisp", "sql", "pascal", "ada",
-          "logo", "assembly", "abap", "clojure", "scheme", "lua", "matlab", "rpg", "bash", "fortran", "erlang",
-          "scratch", "prolog", "go", "f#", "cobol", "d", "forth", "r", "haskell", "apl", "tcl", "ml", "sas",
-          "octive", "scala", "coffeescript", "smalltalk", "awk"]
+  LANGS = %w(abap ada apl assembly awk bash basic c c# c++ clojure cobol
+             coffeescript d delphi erlang f# forth fortran go haskell
+             java javascript lisp logo lua matlab ml obj-c objective-c
+             octive pascal perl php prolog python r rpg ruby sas scala
+             scheme scratch smalltalk sql tcl)
 
   def self.totals
-    @@totals ||= {}  
+    @@totals ||= {}
   end
 
   def self.clear_totals
@@ -21,10 +21,6 @@ class Stats
       get_totals_for_tweet(t)
     end
     totals.sort_by {|lang, total| total}.reverse
-  end
-
-  def self.count_tweets
-    
   end
 
   # return array of languages
