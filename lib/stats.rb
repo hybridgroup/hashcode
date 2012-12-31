@@ -15,7 +15,9 @@ class Stats
   def self.get_totals
     @totals = {}
     get_tweets.each { |tweet| get_langs_from_tweet(tweet) }
-    @totals.sort_by { |lang, total| total }.reverse
+    @languages = @totals.sort_by { |k,v| v }.reverse.map(&:first)
+
+    { :totals => @totals, :languages => @languages }
   end
 
   # Public: Gets languages in tweet text and adds to toal

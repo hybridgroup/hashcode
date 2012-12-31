@@ -8,7 +8,6 @@
     #stats
       %figure
         %figcaption Languages From The 100 Most Recent Tweets
-        %img{:src => Gchart.bar(:size => '680x200', :theme => :greyscale, :data => @stats.collect{|s|s[1]})}
 
       #tabledata
         %table.striped.condensed
@@ -16,10 +15,10 @@
             %th Language
             %th Count
           %tbody
-            - @stats.each do |stat|
+            - @stats[:languages].each do |language|
               %tr
-                %td= stat[0]
-                %td= stat[1]
+                %td= language
+                %td= @stats[:totals][language]
 
   .five.columns.offset-by-one
     <a href="https://twitter.com/intent/tweet?button_hashtag=code2012" class="twitter-hashtag-button" data-size="large" data-related="deadprogram">Tweet #code2012</a>

@@ -15,6 +15,8 @@
     %link{:rel => "stylesheet", :href => "/stylesheets/application.css"}
 
     %script{:type =>"text/javascript", :src => "http://widgets.twimg.com/j/2/widget.js"}
+    :javascript
+      window.language_stats = #{@stats.to_json}
   %body
     .container
       %header
@@ -28,6 +30,7 @@
 
 
     %script{:type =>"text/javascript", :src => "/javascript/jquery-1.7.1.min.js"}
+    %script{:type =>"text/javascript", :src => "/javascript/d3.v3.min.js"}
     %script{:type =>"text/javascript", :src => "/javascript/application.js"}
 
     :javascript
