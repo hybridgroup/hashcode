@@ -1,26 +1,27 @@
+%p#subtitle
+  What programming languages have you used this year? Tweet using
+  %a{:href => "https://twitter.com/search/realtime?q=%23code2012"}#code2012
+
 .row
-  .span10
-    %blockquote.large
-      "What programming languages have you used this year? Tweet using #code2012"
-    %br/
-    %br/
+  .ten.columns
+
     #stats
-      %img{:src => Gchart.bar(:title => 'Languages From The Most Recent 100 Tweets', :size => '600x200', :theme => :greyscale, :data => @stats.collect{|s|s[1]})}
+      %figure
+        %figcaption Languages From The 100 Most Recent Tweets
+        %img{:src => Gchart.bar(:size => '680x200', :theme => :greyscale, :data => @stats.collect{|s|s[1]})}
 
       #tabledata
-        %table.zebra-striped
-          %th
-            Language
-          %th
-            Count
-          - @stats.each do |s|
-            %tr
-              %td
-                #{s[0]}
-              %td
-                #{s[1]}
+        %table.striped.condensed
+          %thead
+            %th Language
+            %th Count
+          %tbody
+            - @stats.each do |stat|
+              %tr
+                %td= stat[0]
+                %td= stat[1]
 
-  .span5.offset1
+  .five.columns.offset-by-one
     <a href="https://twitter.com/intent/tweet?button_hashtag=code2012" class="twitter-hashtag-button" data-size="large" data-related="deadprogram">Tweet #code2012</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     %br

@@ -11,29 +11,22 @@
 
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
 
-    %link{:rel => "stylesheet", :href => "/stylesheets/bootstrap.css"}
+    %link{:rel => "stylesheet", :href => "/stylesheets/barebones.css"}
     %link{:rel => "stylesheet", :href => "/stylesheets/application.css"}
 
     %script{:type =>"text/javascript", :src => "http://widgets.twimg.com/j/2/widget.js"}
     %script{:type =>"text/javascript", :src => "/javascript/jquery-1.7.1.min.js"}
     %script{:type =>"text/javascript", :src => "/javascript/application.js"}
   %body
-    .topbar
-      .topbar-inner
-        .container
-          %a.brand{:href => "/"} #code2012
-
-    .container.start
-      .page-header
+    .container
+      %header
         %h1
           Twitter #code2012 Stats
           %small
             Handmade By
             %a{:href => "http://hybridgroup.com/"} The Hybrid Group
+        %hr
       = yield
-    %footer
-      %p
-      %br
 
   :javascript
     var _gaq = _gaq || [];
