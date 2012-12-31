@@ -1,8 +1,24 @@
-.container.start {
-  padding-top: 80px;
+header {
+  h1 {
+    margin-bottom: 0px;
+  }
+  hr {
+    margin-top: 0
+  }
 }
 
-blockquote.large {
-  font-size: 20px;
-  line-height: 23px;
+figure {
+  figcaption {
+    color: #888;
+    text-align: center;
+    font-size: 13px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+#subtitle {
+  text-align: center;
+  margin-bottom: 20px;
 }
