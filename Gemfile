@@ -9,3 +9,6 @@ gem 'rack-coffee'
 
 gem 'twitter'
 gem 'json'
+
+gem 'data_mapper'
+gem 'dm-postgres-adapter'
