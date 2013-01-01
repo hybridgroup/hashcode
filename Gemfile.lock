@@ -4,15 +4,25 @@ GEM
     activesupport (3.1.3)
       multi_json (~> 1.0)
     addressable (2.2.6)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.4.0)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
     faraday (0.7.5)
       addressable (~> 2.2.6)
       multipart-post (~> 1.1.3)
       rack (>= 1.1.0, < 2)
     googlecharts (1.6.8)
     haml (3.1.4)
+    json (1.7.6)
     multi_json (1.0.4)
     multipart-post (1.1.4)
     rack (1.4.0)
+    rack-coffee (1.0.0)
+      coffee-script
+      rack
     rack-protection (1.2.0)
       rack
     sass (3.2.4)
@@ -34,6 +44,8 @@ PLATFORMS
 DEPENDENCIES
   googlecharts
   haml
+  json
+  rack-coffee
   sass
   sinatra
   twitter
