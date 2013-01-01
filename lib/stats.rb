@@ -1,7 +1,7 @@
 require 'twitter'
 
 class Stats
-  attr_accessor :totals
+  attr_accessor :stats
 
   LANGS = %w(abap ada apl assembly awk bash basic c c# c++ clojure cobol
              coffeescript d delphi erlang f# forth fortran go haskell
@@ -12,10 +12,10 @@ class Stats
   # Public: Gets language occurence totals from Twitter search for #code2012
   #
   # Returns an array of language occurences
-  def self.get_totals
-    @totals = {}
+  def self.get_stats
+    @stats = []
     get_tweets.each { |tweet| get_langs_from_tweet(tweet) }
-    @totals.sort_by { |lang, total| total }.reverse
+    @stats.sort_by { |stat| stat[:value] }.reverse
   end
 
   # Public: Gets languages in tweet text and adds to toal
@@ -34,10 +34,11 @@ class Stats
   # Returns the current number of occurences of that language as an integer
   def self.add_to_total(lang)
     lang = "objective-c" if lang == "obj-c"
-    if @totals[lang]
-      @totals[lang] = @totals[lang] + 1
+
+    if @stats.select { |f| f[:language] == lang }.first
+      @stats.select { |f| f[:language] == lang }.first[:value] += 1
     else
-      @totals[lang] = 1
+      @stats << {:language => lang, :value => 1}
     end
   end
 
