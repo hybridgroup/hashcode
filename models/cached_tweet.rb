@@ -3,8 +3,21 @@ class CachedTweet
 
   property :id, Serial
   property :tweet_id, String
-  property :tweet, Json
+  property :attrs, Json
   property :created_at, DateTime
+
+  # Public: Creates a CachedTweet from a Tweet object
+  #
+  # tweet - the tweet to cache
+  #
+  # Returns the new CachedTweet
+  def self.create_from_tweet(tweet)
+    create(
+      :tweet_id   => tweet.id,
+      :attrs      => tweet.attrs,
+      :created_at => tweet.created_at
+    )
+  end
 
   # Public: Indicates whether cached tweets exist in the database or not
   #
