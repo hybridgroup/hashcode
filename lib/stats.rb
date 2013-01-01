@@ -1,5 +1,3 @@
-require 'twitter'
-
 class Stats
   attr_accessor :stats
 
@@ -25,7 +23,7 @@ class Stats
   # Returns an array of languages
   def self.get_langs_from_tweet(tweet)
     LANGS.each do |lang|
-      self.add_to_total(lang) if tweet.text.match(/(\s|\b|,)#{lang}(\s|,|$)/i)
+      self.add_to_total(lang) if tweet.attrs['text'].match(/(\s|\b|,)#{lang}(\s|,|$)/i)
     end
   end
 
@@ -46,6 +44,6 @@ class Stats
   #
   # Returns an array of Tweets.
   def self.get_tweets
-    Twitter.search("#code2012", :rpp => 100, :result_type => :recent)
+    CachedTweet.all
   end
 end
