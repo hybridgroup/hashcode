@@ -1,19 +1,19 @@
-class TweetCacher
+class TweetSaver
   attr_accessor :tweets
 
   def initialize
-    if CachedTweet.tweets_present?
-      @tweets = get_tweets(CachedTweet.last_tweet_id)
+    if SavedTweet.tweets_present?
+      @tweets = get_tweets(SavedTweet.last_tweet_id)
     else
       @tweets = get_tweets
     end
   end
 
-  # Public: Caches Tweets in the database
+  # Public: Saves Tweets to the database
   #
   # Returns nothing
-  def cache
-    @tweets.each { |tweet| CachedTweet.create_from_tweet(tweet) }
+  def save
+    @tweets.each { |tweet| SavedTweet.create_from_tweet(tweet) }
   end
 
   private

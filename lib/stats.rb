@@ -44,6 +44,6 @@ class Stats
   #
   # Returns an array of Tweets.
   def self.get_tweets
-    CachedTweet.all
+    SavedTweet.all
   end
 end

@@ -1,4 +1,4 @@
-class CachedTweet
+class SavedTweet
   include DataMapper::Resource
 
   property :id, Serial
