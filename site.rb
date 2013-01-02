@@ -1,9 +1,10 @@
 get "/" do
-  @stats = Stats.get_stats
+  @stats = Stats.collect
+  @count = SavedTweet.count
   haml :index
 end
 
 get "/stats.json" do
   content_type :json
-  Stats.get_stats.to_json
+  Stats.collect.to_json
 end

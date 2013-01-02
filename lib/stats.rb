@@ -10,7 +10,7 @@ class Stats
   # Public: Gets language occurence totals from Twitter search for #code2012
   #
   # Returns an array of language occurences
-  def self.get_stats
+  def self.collect
     @stats = []
     get_tweets.each { |tweet| get_langs_from_tweet(tweet) }
     @stats.sort_by { |stat| stat[:value] }.reverse
@@ -23,7 +23,7 @@ class Stats
   # Returns an array of languages
   def self.get_langs_from_tweet(tweet)
     LANGS.each do |lang|
-      self.add_to_total(lang) if tweet.attrs['text'].match(/(\s|\b|,)#{lang}(\s|,|$)/i)
+      self.add_to_total(lang) if tweet.text.match(/(\s|\b|,)#{lang}(\s|,|$)/i)
     end
   end
 

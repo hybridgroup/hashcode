@@ -32,4 +32,8 @@ class SavedTweet
   def self.last_tweet_id
     Integer(first(:order => [ :created_at.desc ]).tweet_id)
   end
+
+  def text
+    attrs['text']
+  end
 end
