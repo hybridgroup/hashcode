@@ -2,6 +2,8 @@
 
 require 'bundler'
 Bundler.require(:default)
+require 'cgi'
+require 'net/http'
 
 %w(models lib).each do |directory|
   Dir["#{File.dirname(__FILE__)}/#{directory}/*.rb"].each do |file|
@@ -23,4 +25,23 @@ task :default => :save_tweets
 
 task :save_tweets do
   TweetSaver.new.save
+end
+
+task :backlog do
+  (1..15).each do |page|
+    url = "http://search.twitter.com/search.json?q=%23code2012&rpp=100&result_type=recent"
+    url += "&page=#{page}"
+
+    response = JSON.parse(Net::HTTP.get(URI(url)))
+
+    response["results"].each do |tweet|
+      SavedTweet.create(
+        :tweet_id   => tweet["id"],
+        :attrs      => tweet,
+        :created_at => tweet["created_at"]
+      )
+    end
+
+    sleep(0.25)
+  end
 end
