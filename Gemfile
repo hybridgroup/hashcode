@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'sinatra'
-gem 'unicorn', :require => false
+gem 'puma', :require => false
 
 gem 'haml'
 gem 'sass', :require => 'sass/plugin/rack'

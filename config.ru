@@ -1,4 +1,4 @@
-require 'rubygems'
+#\ -s puma
 require 'bundler'
 Bundler.require(:default)
 
