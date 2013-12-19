@@ -15,10 +15,10 @@ DataMapper.setup(:default, ENV["DATABASE_URL"])
 DataMapper.auto_upgrade!
 
 Twitter.configure do |config|
-  config.consumer_key       = ENV["CODE2012_CONSUMER_KEY"]
-  config.consumer_secret    = ENV["CODE2012_CONSUMER_SECRET"]
-  config.oauth_token        = ENV["CODE2012_OAUTH_TOKEN"]
-  config.oauth_token_secret = ENV[ "CODE2012_OAUTH_TOKEN_SECRET"]
+  config.consumer_key       = ENV["HASHCODE_CONSUMER_KEY"]
+  config.consumer_secret    = ENV["HASHCODE_CONSUMER_SECRET"]
+  config.oauth_token        = ENV["HASHCODE_OAUTH_TOKEN"]
+  config.oauth_token_secret = ENV["HASHCODE_OAUTH_TOKEN_SECRET"]
 end
 
 task :default => :save_tweets
@@ -29,7 +29,7 @@ end
 
 task :backlog do
   (1..15).each do |page|
-    url = "http://search.twitter.com/search.json?q=%23code2012&rpp=100&result_type=recent"
+    url = "http://search.twitter.com/search.json?q=%23code2013&rpp=100&result_type=recent"
     url += "&page=#{page}"
 
     response = JSON.parse(Net::HTTP.get(URI(url)))

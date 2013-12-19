@@ -15,10 +15,10 @@ end
 DataMapper.auto_upgrade!
 
 Twitter.configure do |config|
-  config.consumer_key       = ENV["CODE2012_CONSUMER_KEY"]
-  config.consumer_secret    = ENV["CODE2012_CONSUMER_SECRET"]
-  config.oauth_token        = ENV["CODE2012_OAUTH_TOKEN"]
-  config.oauth_token_secret = ENV[ "CODE2012_OAUTH_TOKEN_SECRET"]
+  config.consumer_key       = ENV["HASHCODE_CONSUMER_KEY"]
+  config.consumer_secret    = ENV["HASHCODE_CONSUMER_SECRET"]
+  config.oauth_token        = ENV["HASHCODE_OAUTH_TOKEN"]
+  config.oauth_token_secret = ENV["HASHCODE_OAUTH_TOKEN_SECRET"]
 end
 
 Sass::Plugin.options[:style] = :compressed
