@@ -1,6 +1,8 @@
 #\ -s puma
 require 'bundler'
 Bundler.require(:default)
-require './app'
 
+Dotenv.load
+
+require './app'
 run HashCode
