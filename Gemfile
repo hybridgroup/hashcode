@@ -10,3 +10,6 @@ gem 'haml'
 gem 'puma'
 
 gem 'dotenv'
+gem 'data_mapper'
+gem 'dm-postgres-adapter'
+gem 'twitter'
