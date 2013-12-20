@@ -10,8 +10,8 @@ To run the Hashcode app, you'll need some environment variables set. These are:
 - `DATABASE_URL` - Postgres URL to your database (e.g. postgres://localhost/code2013)
 - `HASHCODE_CONSUMER_KEY` - Twitter app consumer key
 - `HASHCODE_CONSUMER_SECRET` - Twitter app consumer key
-- `HASHCODE_OAUTH_TOKEN` - Twitter app OAuth token
-- `HASHCODE_OAUTH_TOKEN_SECRET` - Twitter app OAuth token secret
+- `HASHCODE_ACCESS_TOKEN` - Twitter app OAuth token
+- `HASHCODE_ACCESS_TOKEN_SECRET` - Twitter app OAuth token secret
 
 ## Running
 

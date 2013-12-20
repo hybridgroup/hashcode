@@ -2,7 +2,7 @@
 require 'bundler'
 Bundler.require(:default)
 
-Dotenv.load
+require './lib/config.rb'
 
 require './app'
 run HashCode
