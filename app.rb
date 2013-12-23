@@ -29,6 +29,7 @@ class HashCode < Sinatra::Base
   end
 
   get "/" do
+    @stats = Stats.last.sorted_stats
     erb :index
   end
 end

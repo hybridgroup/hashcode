@@ -1,1 +1,16 @@
-<h1>Hello World!</h1>
+<h1>Twitter #code2013 stats</h1>
+
+<table>
+  <thead>
+    <th>Language</th>
+    <th>Count</th>
+  </thead>
+  <tbody>
+    <% @stats.each do |name, count| %>
+      <tr>
+        <td><%= name %></td>
+        <td><%= count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
