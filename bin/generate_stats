@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+# A script to generate stats for all tweets currently existing in the database,
+# and store them in the Stats model.
+
+require 'bundler'
+Bundler.setup
+
+require 'dotenv'
+require 'data_mapper'
+
+# Setup configuration and connect to database
+require './lib/config.rb'
+
+require './lib/stat_generator.rb'
+
+tweets = Tweet.all
+stats = StatGenerator.new(tweets).generate
+
+Stats.create(:stats => stats, :created_at => Time.now)
