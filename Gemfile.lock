@@ -120,6 +120,7 @@ DEPENDENCIES
   dm-postgres-adapter (~> 1.2.0)
   dotenv (~> 0.9.0)
   haml (~> 4.0.4)
+  json
   puma (~> 2.7.1)
   sass (~> 3.2.13)
   sinatra (~> 1.4.4)

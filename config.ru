@@ -1,5 +1,6 @@
 #\ -s puma
 require 'bundler'
+require 'json'
 Bundler.require(:default)
 
 require './lib/config.rb'
