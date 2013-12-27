@@ -18,6 +18,7 @@ class HashCode < Sinatra::Base
 
     js :application, "/javascripts/application.js", [
       "/components/jquery/jquery.js",
+      "/components/d3/d3.js",
       "/javascripts/script.js"
     ]
 
