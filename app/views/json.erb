@@ -35,7 +35,7 @@ var vis = d3.select("#chart").append("svg")
 
   node.append("circle")
       .attr("r", function(d) { return d.r; })
-      .style("fill", function(d) { return fill(d.packageName); });
+      .style("fill", function(d) { return fill( Math.floor((Math.random()*20)+1) ); });
 
   node.append("text")
       .attr("text-anchor", "middle")
