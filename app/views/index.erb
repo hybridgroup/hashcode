@@ -13,7 +13,7 @@
     <tbody>
       <% @stats.each do |name, count| %>
         <tr>
-          <td><%= name %></td>
+          <td><a href="https://twitter.com/search?q=%23code2013%20<%= name %>&src=typd&f=realtime" target="blank"><%= name %></a></td>
           <td class="text-center"><%= count %></td>
         </tr>
       <% end %>
