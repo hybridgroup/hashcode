@@ -1,18 +1,22 @@
 <div id="chart"></div>
 
-<table>
-  <thead>
-    <tr>
-    <th>Language</th>
-    <th>Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @stats.each do |name, count| %>
+<div class="container-raw">
+  <h2>Raw Data</h2>
+
+  <table class="raw-data">
+    <thead>
       <tr>
-        <td><%= name %></td>
-        <td><%= count %></td>
+      <th>Language</th>
+      <th>Count</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @stats.each do |name, count| %>
+        <tr>
+          <td><%= name %></td>
+          <td><%= count %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
