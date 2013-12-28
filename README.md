@@ -1,17 +1,21 @@
 # Hashcode
 
-Hashcode is a site to track the real-time results of the #code2013 hashtag on
+Hashcode is a site to track the real-time results of the `#code2013` hashtag on
 Twitter.
 
 ## ENV variables
 
-To run the Hashcode app, you'll need some environment variables set. These are:
+To run the Hashcode app, you'll need some environment variables set.
+
+These are:
 
 - `DATABASE_URL` - Postgres URL to your database (e.g. postgres://localhost/code2013)
 - `HASHCODE_CONSUMER_KEY` - Twitter app consumer key
 - `HASHCODE_CONSUMER_SECRET` - Twitter app consumer key
 - `HASHCODE_ACCESS_TOKEN` - Twitter app OAuth token
 - `HASHCODE_ACCESS_TOKEN_SECRET` - Twitter app OAuth token secret
+
+We're providing a `.env.example` file that includes these environment variables, copy it and name it as `.env`.
 
 ## Running
 
