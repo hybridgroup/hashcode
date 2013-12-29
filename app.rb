@@ -26,7 +26,6 @@ class HashCode < Sinatra::Base
       "/stylesheets/style.css"
     ]
 
-    js_compression  :jsmin
     css_compression :sass
   end
 
