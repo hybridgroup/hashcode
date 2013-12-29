@@ -6,15 +6,15 @@
   <table class="raw-data">
     <thead>
       <tr>
-      <th>Language</th>
+      <th class="text-left">Language</th>
       <th>Count</th>
       </tr>
     </thead>
     <tbody>
       <% @stats.each do |name, count| %>
         <tr>
-          <td><a href="https://twitter.com/search?q=%23code2013%20<%= name %>&src=typd&f=realtime" target="blank"><%= name %></a></td>
-          <td class="text-center"><%= count %></td>
+          <td class="raw-lang"><a href="https://twitter.com/search?q=%23code2013%20<%= name %>&src=typd&f=realtime" target="blank"><%= name %></a></td>
+          <td class="raw-count"><%= count %></td>
         </tr>
       <% end %>
     </tbody>
