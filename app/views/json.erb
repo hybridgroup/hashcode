@@ -45,6 +45,9 @@ var node = vis.selectAll("g.node")
       div.transition()        
         .duration(500)      
         .style("opacity", 0);   
+    })
+    .on("click", function(d) {
+      window.open('https://twitter.com/search?q=%23code2013%20' + d.className +'&src=typd&f=realtime');
     });
 /*
 node.append("title")
