@@ -17,7 +17,6 @@ class HashCode < Sinatra::Base
     serve "/images",      from: "app/assets/images"
 
     js :application, "/javascripts/application.js", [
-      "/components/jquery/jquery.js",
       "/components/d3/d3.js",
       "/stats.js"
     ]
