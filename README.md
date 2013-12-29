@@ -1,13 +1,13 @@
 # Hashcode
 
-Just a fun little mini-site to track the real-time results of the #code2013
+Just a fun little mini-site to track the real-time results of the #code2012
 hashtag on Twitter.
 
 ## Running
 
 To run the application, you need to define the following environment variables:
 
-- `DATABASE_URL` - Postgres URL to your database (e.g. postgres://localhost/code2013)
+- `DATABASE_URL` - Postgres URL to your database (e.g. postgres://localhost/code2012)
 - `HASHCODE_CONSUMER_KEY` - Twitter app consumer key
 - `HASHCODE_CONSUMER_SECRET` - Twitter app consumer key
 - `HASHCODE_OAUTH_TOKEN` - Twitter app OAuth token

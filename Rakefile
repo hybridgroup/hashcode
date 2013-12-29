@@ -29,7 +29,7 @@ end
 
 task :backlog do
   (1..15).each do |page|
-    url = "http://search.twitter.com/search.json?q=%23code2013&rpp=100&result_type=recent"
+    url = "http://search.twitter.com/search.json?q=%23code2012&rpp=100&result_type=recent"
     url += "&page=#{page}"
 
     response = JSON.parse(Net::HTTP.get(URI(url)))
