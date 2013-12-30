@@ -14,3 +14,5 @@ gem 'data_mapper', '~> 1.2.0'
 gem 'dm-postgres-adapter', '~> 1.2.0'
 gem 'twitter', '~> 5.4.1'
 gem 'json'
+
+gem "clockwork", "~> 0.7.0"
