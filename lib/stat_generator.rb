@@ -59,7 +59,7 @@ class StatGenerator
     "R" => %w(r rlang),
     "Racket" => %w(racket),
     "RPG" => %w(rpg),
-    "Ruby" => %w(ruby rb),
+    "Ruby" => %w(ruby rb rubby),
     "Rust" => %w(rust),
     "SAS" => %w(sas),
     "Sass" => %w(sass),
