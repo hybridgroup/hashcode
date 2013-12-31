@@ -21,7 +21,7 @@ class StatGenerator
     "Dart" => %w(dart),
     "Delphi" => %w(delphi),
     "Elixir" => %w(elixir),
-    "Emcas Lisp" => %w(elisp),
+    "Emacs Lisp" => %w(elisp emacs-lisp emacs),
     "Erlang" => %w(erlang),
     "Factor" => %w(factor),
     "F#" => %w(f# fsharp f_sharp f-sharp),
