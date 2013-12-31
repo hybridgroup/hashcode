@@ -52,6 +52,7 @@ class StatGenerator
     "Pascal" => %w(pascal),
     "Perl" => %w(pl perl),
     "Postscript" => %w(postscript),
+    "Pogoscript" => %w(pogoscript pogo),
     "Prolog" => %w(prolog),
     "Python" => %w(python),
     "Q" => %w(Q),
