@@ -16,3 +16,5 @@ gem 'twitter', '~> 5.4.1'
 gem 'json'
 
 gem "clockwork", "~> 0.7.0"
+
+gem "rspec", "~> 2.14.1"
