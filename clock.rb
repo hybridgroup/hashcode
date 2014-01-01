@@ -12,4 +12,4 @@ import_tweets = File.join(__dir__, "bin/import_tweets")
 generate_stats = File.join(__dir__, "bin/generate_stats")
 
 every(2.minutes, "Running import_tweets script") { system import_tweets }
-every(2.minutes, "Running generate_stats script") { system generate_stats }
+every(10.minutes, "Running generate_stats script") { system generate_stats }
