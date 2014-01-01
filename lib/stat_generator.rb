@@ -11,7 +11,7 @@ class StatGenerator
     "Bash" => %w(bash),
     "C" => %w(c),
     "C#" => %w(c# csharp c_sharp c-sharp),
-    "C++" => %w(c++ cplusplus),
+    "C++" => %w(c\+\+ cplusplus),
     "cT" => %w(ct),
     "Clean" => %w(clean),
     "Clojure" => %w(clojure clj),
