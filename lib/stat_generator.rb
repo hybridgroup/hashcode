@@ -90,7 +90,7 @@ class StatGenerator
     LANGS.each do |name, strings|
       match = false
       strings.each do |string|
-        match = true if tweet.match((/(\s|\b|,)#{string}(\s|,|$)/i))
+        match = true if tweet.match((/(\s|^|,)#{string}(\s|,|$)/i))
       end
 
       @stats[name] += 1 if match
