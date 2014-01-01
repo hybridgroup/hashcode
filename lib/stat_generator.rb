@@ -34,7 +34,7 @@ class StatGenerator
     "J" => %w(j),
     "J#" => %w(j# jsharp j_sharp j-sharp),
     "Java" => %w(java),
-    "JavaScript" => %w(javascript),
+    "JavaScript" => %w(javascript js node.js node),
     "Julia" => %w(julia),
     "Ladder Logic" => %w(ladderlogic ladder-logic ladder),
     "Lisp" => %w(lisp),
