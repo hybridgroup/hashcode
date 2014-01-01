@@ -22,7 +22,7 @@ var vis = d3.select("#chart").append("svg")
     .attr("height", r)
     .attr("class", "bubble");
 
-var div = d3.select("#chart").append("div")   
+var div = d3.select("#chart").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
@@ -33,7 +33,7 @@ var node = vis.selectAll("g.node")
     .enter().append("g")
     .attr("class", "node")
     .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
-    .on("mouseover", function(d) { 
+    .on("mouseover", function(d) {
       div.transition()
         .duration(200)
         .style("opacity", .9);
@@ -41,10 +41,10 @@ var node = vis.selectAll("g.node")
         .style("left", (d3.event.pageX) + "px")
         .style("top", (d3.event.pageY - 28) + "px");
     })
-    .on("mouseout", function(d) {       
-      div.transition()        
-        .duration(500)      
-        .style("opacity", 0);   
+    .on("mouseout", function(d) {
+      div.transition()
+        .duration(500)
+        .style("opacity", 0);
     })
     .on("click", function(d) {
       window.open('https://twitter.com/search?q=%23code2013%20' + d.className +'&src=typd&f=realtime');
