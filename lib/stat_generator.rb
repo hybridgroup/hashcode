@@ -31,6 +31,7 @@ class StatGenerator
     "Go" => %w(go golang),
     "Groovy" => %w(groovy),
     "Haskell" => %w(haskell),
+    "Haxe" => %w(haxe),
     "J" => %w(j),
     "J#" => %w(j# jsharp j_sharp j-sharp),
     "Java" => %w(java),
