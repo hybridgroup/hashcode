@@ -31,6 +31,22 @@ describe StatGenerator do
     expect(stats["Python"]).to eql 1
   end
 
+  it "finds languages seperated by spaces" do
+    tweets = [tweet("#code2013 python ruby javascript")]
+    stats = StatGenerator.new(tweets).generate
+    expect(stats["Ruby"]).to eql 1
+    expect(stats["JavaScript"]).to eql 1
+    expect(stats["Python"]).to eql 1
+  end
+
+  it "finds languages seperated by spaces and commas" do
+    tweets = [tweet("#code2013 python, ruby, javascript")]
+    stats = StatGenerator.new(tweets).generate
+    expect(stats["Ruby"]).to eql 1
+    expect(stats["JavaScript"]).to eql 1
+    expect(stats["Python"]).to eql 1
+  end
+
   it "does not extract partial languages" do
     tweets = [tweet("#code2013 c++ objective-c")]
     stats = StatGenerator.new(tweets).generate
