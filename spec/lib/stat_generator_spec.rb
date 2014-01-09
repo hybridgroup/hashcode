@@ -11,6 +11,15 @@ describe StatGenerator do
     expect(stats["Python"]).to eql 1
   end
 
+  it "finds instances of languages in strings" do
+    tweets = [tweet("#code2013 ruby javascript python")]
+    stats = StatGenerator.new(tweets).generate
+
+    expect(stats["Ruby"]).to eql 1
+    expect(stats["JavaScript"]).to eql 1
+    expect(stats["Python"]).to eql 1
+  end
+
   it "finds languages at the start of a string" do
     tweets = [tweet("ruby #code2013")]
     stats = StatGenerator.new(tweets).generate
@@ -65,5 +74,18 @@ describe StatGenerator do
     tweets = [tweet("#code2013")]
     stats = StatGenerator.new(tweets).generate
     stats.each { |_, v| expect(v).to eql 0 }
+  end
+
+  it "allows a user to vote for a language once" do
+    tweets = [tweet("#code2013 clojure", 1), tweet("#code2013 clojure", 1)]
+    stats = StatGenerator.new(tweets).generate
+    expect(stats["Clojure"]).to eql 1
+  end
+
+  it "allows a user to vote for different languages on different tweets" do
+    tweets = [tweet("#code2013 clojure", 1), tweet("#code2013 clojure ruby", 1)]
+    stats = StatGenerator.new(tweets).generate
+    expect(stats["Clojure"]).to eql 1
+    expect(stats["Ruby"]).to eql 1
   end
 end
