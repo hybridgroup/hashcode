@@ -1,19 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.0.2)
-      i18n (~> 0.6, >= 0.6.4)
-      minitest (~> 4.2)
-      multi_json (~> 1.3)
-      thread_safe (~> 0.1)
-      tzinfo (~> 0.3.37)
     addressable (2.3.5)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
     buftok (0.2.0)
-    clockwork (0.7.0)
-      activesupport
-      tzinfo (~> 0.3.35)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -79,13 +70,11 @@ GEM
     http (0.5.0)
       http_parser.rb
     http_parser.rb (0.6.0)
-    i18n (0.6.9)
     jsmin (1.0.1)
     json (1.8.1)
     json_pure (1.8.1)
     memoizable (0.4.0)
       thread_safe (~> 0.1.3)
-    minitest (4.7.5)
     multi_json (1.8.2)
     multipart-post (1.2.0)
     puma (2.7.1)
@@ -129,14 +118,12 @@ GEM
       json (~> 1.8)
       memoizable (~> 0.4.0)
       simple_oauth (~> 0.2.0)
-    tzinfo (0.3.38)
     uuidtools (2.1.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  clockwork (~> 0.7.0)
   coffee-script (~> 2.2.0)
   data_mapper (~> 1.2.0)
   dm-postgres-adapter (~> 1.2.0)
