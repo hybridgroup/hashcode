@@ -5,6 +5,7 @@ class StatGenerator
     "ActionScript" => %w(actionscript action_script as3 as2 as1 flash flex),
     "Ada" => %w(ada),
     "Apl" => %w(apl),
+    "AppleScript" => %w(applescript),
     "Assembly" => %w(assembly),
     "Alice" => %w(alice),
     "Awk" => %w(awk),
