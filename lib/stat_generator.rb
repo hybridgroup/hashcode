@@ -2,7 +2,7 @@ class StatGenerator
   # A map of language names to possible shorthand versions.
   LANGS = {
     "Abap" => %w(abap),
-    "Ada" => %w(ada),
+    "Ada" => %w(ada),f
     "Apl" => %w(apl),
     "Assembly" => %w(assembly),
     "Alice" => %w(alice),
@@ -28,6 +28,7 @@ class StatGenerator
     "F#" => %w(f# fsharp f_sharp f-sharp),
     "Forth" => %w(forth),
     "Fortran" => %w(fortran),
+    "Frink" => %w(frink),
     "Go" => %w(go golang),
     "Groovy" => %w(groovy),
     "Haskell" => %w(haskell),
@@ -46,6 +47,8 @@ class StatGenerator
     "Matlab" => %w(matlab),
     "Mirah" => %w(mirah),
     "Mathematica" => %w(mathematica),
+    "Nimrod" => %w(nimrod),
+    "Kotlin" => %w(kotlin),
     "Objective-C" => %w(objectivec objective-c objc objective_c),
     "Ocaml" => %w(ocaml),
     "Octave" => %w(octave),
