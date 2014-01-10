@@ -72,6 +72,7 @@ class StatGenerator
     "SAS" => %w(sas),
     "Sass" => %w(sass),
     "SQL" => %w(sql mysql postgresql),
+    "SPARQL" => %w(sparql),
     "Scala" => %w(scala),
     "Scheme" => %w(scheme),
     "Scratch" => %w(scratch),
