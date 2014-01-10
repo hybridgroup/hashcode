@@ -73,7 +73,7 @@ class StatGenerator
     "Rust" => %w(rust),
     "SAS" => %w(sas),
     "Sass" => %w(sass),
-    "SQL" => %w(sql mysql postgresql),
+    "SQL" => %w(sql mysql postgresql plsql pl-sql pl\/sql),
     "SPARQL" => %w(sparql),
     "Scala" => %w(scala),
     "Scheme" => %w(scheme),
