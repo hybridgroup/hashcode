@@ -2,7 +2,7 @@ class StatGenerator
   # A map of language names to possible shorthand versions.
   LANGS = {
     "Abap" => %w(abap),
-    "ActionScript" => %w(actionscript action_script),
+    "ActionScript" => %w(actionscript action_script as3),
     "Ada" => %w(ada),
     "Apl" => %w(apl),
     "Assembly" => %w(assembly),
