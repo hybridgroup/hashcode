@@ -49,6 +49,7 @@ class StatGenerator
     "Matlab" => %w(matlab),
     "Mirah" => %w(mirah),
     "Mathematica" => %w(mathematica),
+    "Moonscript" => %w(moonscript),
     "Objective-C" => %w(objectivec objective-c objc objective_c),
     "Ocaml" => %w(ocaml),
     "Octave" => %w(octave),
