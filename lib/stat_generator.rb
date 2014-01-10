@@ -77,6 +77,7 @@ class StatGenerator
     "Scratch" => %w(scratch),
     "Smalltalk" => %w(smalltalk),
     "TCL" => %w(TCL),
+    "Visual Basic" => %w(visual_basic vb),
     "VBScript" => %w(vbscript),
     "VimScript" => %w(vimscript vim-script)
   }
