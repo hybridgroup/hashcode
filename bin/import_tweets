@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-HASHTAG = "#code2013"
+HASHTAG = "#code2014"
 
 # A script to import a backlog of tweets with the #{HASHTAG} hashtag. Uses the
 # Twitter Search API to fetch a number of tweets containing the hashtag, then
