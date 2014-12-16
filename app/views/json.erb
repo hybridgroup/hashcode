@@ -10,7 +10,7 @@ var json = {
 
 var r = 960,
     format = d3.format(",d"),
-    fill = d3.scale.category20();
+    fill = d3.scale.ordinal().range(["#FFAD63", "#E65200", "#114522", "#9E99C8", "#5B9EC6", "#7E4617", "#024261", "#BD6C2D", "#658960", "#03608C", "#7B7B7B", "#5A5772", "#5E5E5E", "#9DCAE2"]);
 
 var bubble = d3.layout.pack()
     .sort(null)
