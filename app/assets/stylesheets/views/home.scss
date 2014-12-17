@@ -187,6 +187,8 @@ header {
   padding-bottom: 30px;
   iframe {
     height: 1700px;
+    display: block;
+    margin-bottom: 30px;
   }
 
   @media screen and (max-width: $break-tablet) {
@@ -197,6 +199,7 @@ header {
   @media screen and (max-width: $break-mobile) {
     width: 90%;
     margin-left: 15px;
+    float: none;
   }
 }
 
