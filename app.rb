@@ -21,7 +21,6 @@ class HashCode < Sinatra::Base
     ]
 
     css :application, "/stylesheets/application.css", [
-      "/stylesheets/style.css",
       "/stylesheets/app.css"
     ]
 
