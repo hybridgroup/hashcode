@@ -6,7 +6,6 @@ class HashCode < Sinatra::Base
     set :root, __dir__
 
     # Since Sinatra::AssetPack won't change the load path
-    set :sass, { load_paths: [ "#{root}/app/assets/stylesheets/" ] }
     set :scss, { load_paths: [ "#{root}/app/assets/stylesheets" ] }
   end
 
