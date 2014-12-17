@@ -184,6 +184,7 @@ header {
   height: 500px;
   width: 480px;
   float: right;
+  padding-bottom: 30px;
   iframe {
     height: 1700px;
   }
@@ -191,6 +192,11 @@ header {
   @media screen and (max-width: $break-tablet) {
     width: 45%;
     margin-right: 15px;
+  }
+
+  @media screen and (max-width: $break-mobile) {
+    width: 90%;
+    margin-left: 15px;
   }
 }
 
@@ -229,6 +235,12 @@ header {
     width: 45%;
     margin-left: 15px;
   }
+
+  @media screen and (max-width: $break-mobile) {
+    width: 90%;
+    margin: 15px;
+    float: none;
+  }
 }
 
 .text-center {
@@ -242,6 +254,7 @@ header {
 footer {
   height: 50px;
   clear: both;
+  display: block;
 }
 
 div.tooltip {
