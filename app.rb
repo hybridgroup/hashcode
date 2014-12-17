@@ -1,7 +1,3 @@
-require 'sinatra/base'
-require 'sinatra/assetpack'
-require 'sass'
-
 class HashCode < Sinatra::Base
   register Sinatra::AssetPack
     configure do
@@ -10,8 +6,8 @@ class HashCode < Sinatra::Base
     set :root, __dir__
 
     # Since Sinatra::AssetPack won't change the load path
-    set :sass, { load_paths: [ "#{HashCode.root}/assets/stylesheets" ] }
-    set :scss, sass
+    set :sass, { load_paths: [ "#{root}/app/assets/stylesheets/" ] }
+    set :scss, { load_paths: [ "#{root}/app/assets/stylesheets" ] }
   end
 
   assets do
