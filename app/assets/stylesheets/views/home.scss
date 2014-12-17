@@ -1,8 +1,12 @@
 header {
-  height: 120px;
+  min-height: 120px;
   width: 960px;
   display: block;
   margin: 0 auto;
+  overflow: hidden;
+  @media screen and (max-width: $break-tablet) {
+    width: 100%;
+  }
 }
 
 .header-row {
@@ -13,6 +17,16 @@ header {
   height: 146px;
   width: 357px;
   float: left;
+  overflow: hidden;
+  @media screen and (max-width: $break-tablet) {
+    padding-left: 15px;
+    width: 266px;
+  }
+
+  @media screen and (max-width: $break-small-tablet) {
+    clear: both;
+    text-align: center;
+  }
 }
 
 .header-right {
@@ -20,6 +34,16 @@ header {
   float: left;
   padding-left: 140px;
   margin-top: 35px;
+  @media screen and (max-width: $break-tablet) {
+    float: right;
+    padding-left: 0;
+  }
+
+  @media screen and (max-width: $break-small-tablet) {
+    clear: both;
+    text-align: center;
+  }
+
   h3 {
     color: white;
     float: left;
@@ -29,12 +53,20 @@ header {
     font-weight: 400;
     letter-spacing: 0.1px;
     margin-right: 20px;
+    @media screen and (max-width: $break-tablet) {
+      margin-right: 15px;
+      float: none;
+    }
+
     span {
       color: #2c99c4;
     }
   }
-  a {
+  .twitter-hashtag-button, iframe {
     float: left;
+    @media screen and (max-width: $break-tablet) {
+      display: none;
+    }
   }
 }
 
@@ -77,6 +109,10 @@ header {
   min-height: 960px;
   width: 960px;
   margin: 0 auto;
+  @media screen and (max-width: $break-tablet) {
+    display: none;
+  }
+
   svg {
     margin: 0 auto;
     display: block;

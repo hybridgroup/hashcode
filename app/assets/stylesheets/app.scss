@@ -1,3 +1,9 @@
 @import "vendor/normalize";
+
+$break-large: 1024px;
+$break-tablet: 960px;
+$break-small-tablet: 600px;
+$break-mobile: 568px;
+
 @import "views/shared/body";
 @import "views/home";
