@@ -128,6 +128,7 @@ header {
   min-height: 960px;
   width: 960px;
   margin: 0 auto;
+  overflow: hidden;
   @media screen and (max-width: $break-tablet) {
     display: none;
   }
@@ -165,6 +166,7 @@ header {
 
   @media screen and (max-width: $break-tablet) {
     width: 100%;
+    overflow: hidden;
     h2 {
       margin-left: 15px;
     }
@@ -181,14 +183,12 @@ header {
 }
 
 .twitter-feed {
-  height: 500px;
   width: 480px;
   float: right;
   padding-bottom: 30px;
   iframe {
     height: 1700px;
     display: block;
-    margin-bottom: 30px;
   }
 
   @media screen and (max-width: $break-tablet) {
@@ -197,7 +197,7 @@ header {
   }
 
   @media screen and (max-width: $break-mobile) {
-    width: 90%;
+    width: 94%;
     margin-left: 15px;
     float: none;
   }
@@ -254,12 +254,6 @@ header {
   text-align: left;
 }
 
-footer {
-  height: 50px;
-  clear: both;
-  display: block;
-}
-
 div.tooltip {
   position: absolute;
   text-align: center;
@@ -272,40 +266,4 @@ div.tooltip {
 .notice {
   font-size: 17px;
   vertical-align: middle;
-}
-
-#finished-notice {
-  background: #fffbe5;
-  margin: 0;
-  padding: 0;
-  display: block;
-  height: 214px;
-  position: relative;
-  .container {
-    width: 950px;
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
-    h2 {
-      margin: 0 0 3px 0;
-      padding-top: 15px;
-      font-size: 1.65em;
-    }
-    p {
-      margin: 0 0 18px 0;
-      font-weight: 400;
-      font-size: 1.05em;
-      line-height: 1.3em;
-    }
-    code {
-      font-weight: 700;
-    }
-    a {
-      color: #2182c6;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
 }

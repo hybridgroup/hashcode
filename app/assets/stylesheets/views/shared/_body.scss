@@ -1,3 +1,36 @@
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif;
+  position: relative;
+}
+
+#wrap {
+  clear: both;
+  overflow: hidden;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+footer {
+  height: 50px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  clear: both;
+  float: none;
+  padding-top: 15px;
+  overflow: hidden;
+  .thg-logo {
+    display: inline-block;
+    width: 144px;
+    height: 24px;
+    background: url(../images/thg-logo.png) no-repeat top left;
+    vertical-align: middle;
+  }
 }
