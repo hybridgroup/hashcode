@@ -32,8 +32,8 @@ class HashCode < Sinatra::Base
     erb :index
   end
 
-  get '/stats.js' do
-    content_type 'text/javascript'
+  get '/stats.json' do
+    content_type 'application/json'
     @stats = Stats.last.sorted_stats
     erb :json, :layout => false
   end
