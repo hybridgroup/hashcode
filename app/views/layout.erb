@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Code2014 - What programming languages have you used this year?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="refresh" content="36000">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700' rel='stylesheet'>
     <%= css :application %>
   </head>
@@ -16,8 +15,20 @@
     <footer>
       Copyright © 2014 <a href="http://hybridgroup.com" target="blank" class="thg-logo"></a>
     </footer>
+    <script src="/javascripts/jquery.js"></script>
     <script src="/js/d3.min.js"></script>
     <script src="/stats.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('script').each(function() {
+            if ($(this).attr('src') !== "/javascripts/jquery.js") {
+                var old_src = $(this).attr('src');
+                $(this).attr('src', '');
+                setTimeout(function(){ $(this).attr('src', old_src + '?'+new Date()); }, 1);
+            }
+        });
+      });
+    </script>
     <script type='text/javascript'>
       //<![CDATA[
         var _gaq = _gaq || [];
