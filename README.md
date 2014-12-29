@@ -18,6 +18,10 @@ These are:
 
 We're providing a `.env.example` file that includes these environment variables, copy it and name it as `.env`.
 
+## Demo Database
+
+    psql -d code2014 -f database.sample
+
 ## Running
 
 1. Install dependencies with Bundler - `bundle install`
