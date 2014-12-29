@@ -45,3 +45,32 @@ we simply fetch the most recent saved stats and display that to the end user.
 ## Running Tests
 
 	rspec
+
+
+## Production
+
+Enable the needed addons:
+
+    heroku addons:add heroku-postgresql
+    heroku addons:add scheduler
+    heroku addons:add pgbackups:auto-week
+
+Import data seed to production (ignore the warnings):
+
+    heroku pg:psql < seed.sql
+
+Add the scripts to Heroku Scheduler:
+
+    +----------------------+-----------+----------------------+
+    |Task                  | Dyno Size |  Frequency           |
+    +---------------------------------------------------------+
+    |./bin/import_tweets   |  1X       |  Every 10 Minutes    |
+    |./bin/generate_stats  |  1X       |  Every 10 Minutes    |
+    +----------------------+-----------+----------------------+
+
+#### Debugging
+
+If you want to run the executable files on production for debugging purposes, do:
+
+    heroku run bash
+    ./bin/<script>
