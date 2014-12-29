@@ -41,3 +41,7 @@ The `generate_stats` script takes all the tweets existing in the database, and
 uses them to generate language stats, which are then persisted in the `Stats`
 table. This way, rather than generating stats from the tweets for every request,
 we simply fetch the most recent saved stats and display that to the end user.
+
+## Running Tests
+
+	rspec
