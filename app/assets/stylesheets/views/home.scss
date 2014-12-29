@@ -1,3 +1,9 @@
+%update-notice {
+  font-size: 13px;
+  color: gray;
+  margin-left: 10px;
+}
+
 header {
   min-height: 120px;
   width: 960px;
@@ -143,6 +149,7 @@ header {
   text {
     fill: white;
   }
+
   h2 {
     font-size: 33px;
     font-weight: 200;
@@ -152,6 +159,10 @@ header {
     clear: both;
     margin-bottom: -70px;
     color: #ef791a;
+
+    span {
+      @extend %update-notice;
+    }
   }
 }
 
@@ -162,6 +173,10 @@ header {
     font-size: 33px;
     font-weight: 200;
     margin-bottom: 16px;
+
+    span {
+      @extend %update-notice;
+    }
   }
 
   @media screen and (max-width: $break-tablet) {
