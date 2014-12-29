@@ -74,3 +74,7 @@ If you want to run the executable files on production for debugging purposes, do
 
     heroku run bash
     ./bin/<script>
+
+## License
+
+Copyright (c) 2014 The Hybrid Group. Licensed under the Apache 2.0 license.
