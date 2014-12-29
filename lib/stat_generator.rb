@@ -35,6 +35,7 @@ class StatGenerator
     "Forth" => %w(forth),
     "Fortran" => %w(fortran),
     "Frink" => %w(frink),
+    "Gedemin" => %w(gedemin),
     "GLSL" => %w(glsl),
     "Go" => %w(go golang),
     "Gosu" => %w(gosu),
