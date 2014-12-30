@@ -70,6 +70,12 @@ describe StatGenerator do
     expect(stats["Clojure"]).to eql 1
   end
 
+  it "allows languages as hashtags" do
+    tweets = [tweet("#code2014 #ruby")]
+    stats = StatGenerator.new(tweets).generate
+    expect(stats["Ruby"]).to eql 1
+  end
+
   it "sets all language scores to 0 by default" do
     tweets = [tweet("#code2014")]
     stats = StatGenerator.new(tweets).generate
