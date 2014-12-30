@@ -13,6 +13,7 @@ class StatGenerator
     "Basic" => %w(basic),
     "Bash" => %w(bash),
     "Boo" => %w(boo),
+    "Brightscript" => %w(brightscript),
     "C" => %w(c),
     "C#" => %w(c# csharp c_sharp c-sharp),
     "C++" => %w(c\+\+ cplusplus),
