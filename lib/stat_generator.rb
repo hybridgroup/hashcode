@@ -22,7 +22,7 @@ class StatGenerator
     "Clojure" => %w(clojure clj),
     "Cobol" => %w(cobol),
     "CoffeeScript" => %w(coffeescript),
-    "Cold Fusion" => %w(coldfusion cold_fusion cold-fusion cfml),
+    "ColdFusion" => %w(coldfusion cold_fusion cold-fusion cfml),
     "D" => %w(d),
     "Dart" => %w(dart),
     "Delphi" => %w(delphi),
