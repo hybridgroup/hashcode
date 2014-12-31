@@ -14,6 +14,7 @@ class StatGenerator
     "Basic" => %w(basic),
     "Bash" => %w(bash),
     "Boo" => %w(boo),
+    "Brainfuck" => %w(brainfuck),
     "Brightscript" => %w(brightscript),
     "C" => %w(c),
     "C#" => %w(c# csharp c_sharp c-sharp),
