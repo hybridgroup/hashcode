@@ -1,7 +1,7 @@
 class StatGenerator
   # A map of language names to possible shorthand versions.
   LANGS = {
-    "><>" => %w(fish, fishlang),
+    "><>" => %w(fish fishlang),
     "Abap" => %w(abap),
     "ActionScript" => %w(actionscript action_script as3 as2 as1 flash flex),
     "Ada" => %w(ada),
