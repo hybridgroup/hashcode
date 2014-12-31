@@ -56,7 +56,7 @@ class StatGenerator
     "Less" => %w(less),
     "Lisp" => %w(lisp),
     "Lingo" => %w(lingo),
-    "LiveCode" => %w(livecode),
+    "LiveCode" => %w(livecode Livecode),
     "Livescript" => %w(livescript),
     "Logo" => %w(logo),
     "Lua" => %w(lua),
