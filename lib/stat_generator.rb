@@ -91,7 +91,7 @@ class StatGenerator
     "SAS" => %w(sas),
     "Sass" => %w(sass),
     "Seed7" => %w(seed7),
-    "SQL" => %w(sql mysql postgresql plsql pl-sql pl\/sql),
+    "SQL" => %w(sql mysql postgresql plsql pl-sql pl\/sql psql tsql),
     "SPARQL" => %w(sparql),
     "Scala" => %w(scala),
     "Scheme" => %w(scheme),
