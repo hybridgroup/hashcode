@@ -87,6 +87,7 @@ class StatGenerator
     "Rexx" => %w(rexx),
     "RPG" => %w(rpg),
     "Ruby" => %w(ruby rb rubby),
+    "Rubinius" => %w(rbx rubinius),
     "Rust" => %w(rust),
     "SAS" => %w(sas),
     "Sass" => %w(sass),
