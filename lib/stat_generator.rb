@@ -10,7 +10,7 @@ class StatGenerator
     "AppleScript" => %w(applescript),
     "Assembly" => %w(assembly),
     "Alice" => %w(alice),
-    "Algol" => %w(algol60 algol68),
+    "Algol" => %w(algol algol60 algol68),
     "Awk" => %w(awk),
     "Basic" => %w(basic),
     "Bash" => %w(bash),
