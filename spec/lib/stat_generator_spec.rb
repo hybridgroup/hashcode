@@ -103,14 +103,14 @@ describe StatGenerator do
   end
 
   it "disallows bad users" do
-    ENV["HASHTAG_BLOCKED_TERMS"] = "@iambad,@soareyou,@evildoers"
+    ENV["HASHTAG_BLOCKED_TERMS"] = "iambad,soareyou,evildoers"
     tweets = [tweet("#code2014 @iambad #Ruby")]
     stats = StatGenerator.new(tweets).generate
     expect(stats["Ruby"]).to eql 0
   end
 
   it "disallows bad hashtags" do
-    ENV["HASHTAG_BLOCKED_TERMS"] = "#iambad,#soareyou,#evildoers"
+    ENV["HASHTAG_BLOCKED_TERMS"] = "iambad,soareyou,evildoers"
     tweets = [tweet("#code2014 #evildoers #Ruby")]
     stats = StatGenerator.new(tweets).generate
     expect(stats["Ruby"]).to eql 0
