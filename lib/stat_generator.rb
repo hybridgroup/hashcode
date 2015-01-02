@@ -80,6 +80,7 @@ class StatGenerator
     "Pogoscript" => %w(pogoscript pogo),
     "PowerShell" => %w(Powershell, powershell),
     "Prolog" => %w(prolog),
+    "PureScript" => %w(purescript),
     "Python" => %w(python),
     "Q" => %w(Q),
     "R" => %w(r rlang),
