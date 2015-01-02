@@ -117,9 +117,7 @@ class StatGenerator
 
     @tweets = []
     tweets.each do |tweet|
-      if !is_bad?(tweet)
-        @tweets << { user: tweet.attrs["user"]["id"], text: tweet.text }
-      end
+      @tweets << { user: tweet.attrs["user"]["id"], text: tweet.text }
     end
 
     @tweets.each { |tweet| @user_langs[tweet[:user]] = [] }
@@ -127,7 +125,8 @@ class StatGenerator
   end
 
   def generate
-    @tweets.each { |tweet| find_langs_in_tweet(tweet) }
+    @tweets.each { |tweet|
+      find_langs_in_tweet(tweet) unless has_blocked_terms?(tweet) }
     compile_stats
     @stats
   end
@@ -147,11 +146,11 @@ class StatGenerator
     end
   end
 
-  def is_bad?(tweet)
-    return false if ENV["BADDIES"].nil?
-    baddies = ENV["BADDIES"].split(',')
-    baddies.each do |bad|
-      match = tweet.text.match((/(\s|^|,|#|@)#{bad}(\s|,|\.|$)/i))
+  def has_blocked_terms?(tweet)
+    return false if ENV["HASHTAG_BLOCKED_TERMS"].nil?
+    blocked_terms = ENV["HASHTAG_BLOCKED_TERMS"].split(',')
+    blocked_terms.each do |bad|
+      match = tweet[:text].match((/(\s|^|,|#|@)#{bad}(\s|,|\.|$)/i))
       return true if match
     end
     return false

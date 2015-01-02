@@ -15,6 +15,7 @@ These are:
 - `HASHCODE_CONSUMER_SECRET` - Twitter app consumer key
 - `HASHCODE_ACCESS_TOKEN` - Twitter app OAuth token
 - `HASHCODE_ACCESS_TOKEN_SECRET` - Twitter app OAuth token secret
+- `HASHCODE_BLOCKED_TERMS` - Blocked Terms.
 
 We're providing a `.env.example` file that includes these environment variables, copy it and name it as `.env`.
 
