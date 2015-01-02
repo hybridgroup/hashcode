@@ -94,4 +94,12 @@ describe StatGenerator do
     expect(stats["Clojure"]).to eql 1
     expect(stats["Ruby"]).to eql 1
   end
+
+  it "disallows baddies" do
+    ENV["BADDIES"] = "iambad, soareyou, evildoers"
+    tweets = [tweet("#code2014 @iambad #Ruby")]
+    stats = StatGenerator.new(tweets).generate
+    expect(stats["Ruby"]).to eql 0
+  end
+
 end

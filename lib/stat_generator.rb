@@ -115,8 +115,11 @@ class StatGenerator
     @user_langs = {}
     @stats = {}
 
-    @tweets = tweets.collect do |tweet|
-      { user: tweet.attrs["user"]["id"], text: tweet.text }
+    @tweets = []
+    tweets.each do |tweet|
+      if !is_bad?(tweet)
+        @tweets << { user: tweet.attrs["user"]["id"], text: tweet.text }
+      end
     end
 
     @tweets.each { |tweet| @user_langs[tweet[:user]] = [] }
@@ -142,6 +145,16 @@ class StatGenerator
         end
       end
     end
+  end
+
+  def is_bad?(tweet)
+    return false if ENV["BADDIES"].nil?
+    baddies = ENV["BADDIES"].split(',')
+    baddies.each do |bad|
+      match = tweet.text.match((/(\s|^|,|#|@)#{bad}(\s|,|\.|$)/i))
+      return true if match
+    end
+    return false
   end
 
   def compile_stats
