@@ -147,8 +147,8 @@ class StatGenerator
   end
 
   def has_blocked_terms?(tweet)
-    return false if ENV["HASHTAG_BLOCKED_TERMS"].nil?
-    blocked_terms = ENV["HASHTAG_BLOCKED_TERMS"].split(',')
+    return false if ENV["HASHCODE_BLOCKED_TERMS"].nil?
+    blocked_terms = ENV["HASHCODE_BLOCKED_TERMS"].split(',')
     blocked_terms.each do |bad|
       match = tweet[:text].match((/(\s|^|,|#|@)#{bad}(\s|,|\.|$)/i))
       return true if match
