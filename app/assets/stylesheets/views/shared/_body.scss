@@ -34,3 +34,12 @@ footer {
     vertical-align: middle;
   }
 }
+
+.clear {
+  clear: both;
+  zoom: 1;
+  &:after, &:before {
+    content: "";
+    display: table;
+  }
+}
