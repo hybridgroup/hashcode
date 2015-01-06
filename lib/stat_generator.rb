@@ -107,6 +107,7 @@ class StatGenerator
     "Visual Basic" => %w(visual_basic vb),
     "VBScript" => %w(vbscript),
     "VimScript" => %w(vimscript vim-script),
+    "WLanguage" => %w(wlanguage),
     "zsh" => %w(zsh)
   }
 
