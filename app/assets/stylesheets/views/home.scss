@@ -20,7 +20,7 @@ header {
 }
 
 .header-left {
-  height: 146px;
+  height: 120px;
   width: 357px;
   float: left;
   overflow: hidden;
@@ -285,9 +285,18 @@ div.tooltip {
 }
 
 .end-msg {
-  color: #fff;
   font-size: 1.1em;
   position: relative;
+  font-weight: 600;
+  background: #FFFEED;
+  color: #676767;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  @media screen and (max-width: $break-tablet) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   a {
     color: #ef791a;
     text-decoration: none;
