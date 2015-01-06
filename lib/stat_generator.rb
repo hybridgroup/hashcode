@@ -57,6 +57,7 @@ class StatGenerator
     "Julia" => %w(julia),
     "Ladder Logic" => %w(ladderlogic ladder-logic ladder),
     "Less" => %w(less),
+    "LiveCode" => %w(livecode),
     "Lisp" => %w(lisp),
     "Lingo" => %w(lingo),
     "Livescript" => %w(livescript),
