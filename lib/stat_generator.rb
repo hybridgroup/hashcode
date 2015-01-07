@@ -23,6 +23,7 @@ class StatGenerator
     "Ceylon" => %w(ceylon),
     "Chapel" => %w(chapel),
     "cT" => %w(ct),
+    "Clarion" => %w(clarion),
     "Clean" => %w(clean),
     "Clojure" => %w(clojure clj),
     "Cobol" => %w(cobol),
@@ -107,6 +108,8 @@ class StatGenerator
     "Visual Basic" => %w(visual_basic vb),
     "VBScript" => %w(vbscript),
     "VimScript" => %w(vimscript vim-script),
+    "WebDev" => %w(webdev),
+    "WinDev" => %w(windev),
     "WLanguage" => %w(wlanguage),
     "zsh" => %w(zsh)
   }
