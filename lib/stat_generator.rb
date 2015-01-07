@@ -1,4 +1,4 @@
-require "langs"
+require_relative "langs.rb"
 
 class StatGenerator
   attr_reader :tweets, :stats, :user_langs
