@@ -104,6 +104,7 @@
     "Simula" => %w(simula),
     "Swift" => %w(swift),
     "TCL" => %w(TCL),
+    "TypeScript" => %w(typescript),
     "Visual Basic" => %w(visual_basic vb),
     "VBScript" => %w(vbscript),
     "VimScript" => %w(vimscript vim-script),
