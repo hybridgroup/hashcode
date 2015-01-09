@@ -81,6 +81,7 @@
     "Postscript" => %w(postscript),
     "Pogoscript" => %w(pogoscript pogo),
     "PowerShell" => %w(Powershell, powershell),
+    "Processing" => %w(processing),
     "Prolog" => %w(prolog),
     "PureScript" => %w(purescript),
     "Python" => %w(python),
