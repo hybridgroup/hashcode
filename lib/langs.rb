@@ -49,6 +49,7 @@
     "Haskell" => %w(haskell),
     "Hack" => %w(hack),
     "Haxe" => %w(haxe),
+    "INTERCAL" => %w(intercal),
     "Io" => %w(io),
     "J" => %w(j),
     "J#" => %w(j# jsharp j_sharp j-sharp),
@@ -76,6 +77,7 @@
     "PHP" => %w(php),
     "Pascal" => %w(pascal),
     "Perl" => %w(pl perl),
+    "Piet" => %w(piet),
     "Postscript" => %w(postscript),
     "Pogoscript" => %w(pogoscript pogo),
     "PowerShell" => %w(Powershell, powershell),
@@ -109,6 +111,7 @@
     "VBScript" => %w(vbscript),
     "VimScript" => %w(vimscript vim-script),
     "WebDev" => %w(webdev),
+    "Whitespace" => %w(whitespace),
     "WinDev" => %w(windev),
     "WLanguage" => %w(wlanguage),
     "zsh" => %w(zsh)
