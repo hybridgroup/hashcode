@@ -1,20 +1,18 @@
 #!/usr/bin/env ruby
-
-HASHTAG = "##{ENV["HASHCODE_HASHTAG"]}"
-
 # A script to import a backlog of tweets with the #{HASHTAG} hashtag. Uses the
 # Twitter Search API to fetch a number of tweets containing the hashtag, then
 # persists those to the database with DataMapper.
 
 require 'bundler'
 Bundler.setup
-
 require 'dotenv'
 require 'data_mapper'
 require 'twitter'
 
-# Setup configuration and connect to database
+# Setup configuration, load ENV vars and connect to database
 require './lib/config.rb'
+
+HASHTAG = "##{ENV["HASHCODE_HASHTAG"]}"
 
 client = Twitter::REST::Client.new do |config|
   config.consumer_key        = ENV["HASHCODE_CONSUMER_KEY"]
