@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.5'
 
-gem 'sinatra', '~> 1.4.4'
+gem 'sinatra', '~> 1.4.6'
 gem 'sinatra-assetpack', '~> 0.3.1', require: 'sinatra/assetpack'
 gem 'sass', '~> 3.2.13'
 gem 'coffee-script', '~> 2.2.0'
