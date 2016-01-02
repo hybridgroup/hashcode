@@ -16,3 +16,7 @@ gem 'twitter', '~> 5.4.1'
 gem 'json'
 
 gem "rspec", "~> 2.14.1"
+
+group :development do
+  gem 'guard-livereload', '~> 2.4', require: false
+end
