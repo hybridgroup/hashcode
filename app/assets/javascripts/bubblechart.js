@@ -38,7 +38,7 @@ function show_chart(json) {
           .style("opacity", 0);
       })
       .on("click", function(d) {
-        window.open('https://twitter.com/search?q=%23code2014%20' + d.className +'&src=typd&f=realtime');
+        window.open('https://twitter.com/search?q=%23code2015%20' + d.className +'&src=typd&f=realtime');
       });
   /*
   node.append("title")
