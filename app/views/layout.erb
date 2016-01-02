@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Code2014 - What programming languages have you used this year?</title>
+    <title>Code2015 - What programming languages have you used this year?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700' rel='stylesheet'>
     <%= css :application %>
@@ -13,7 +13,7 @@
     </div>
 
     <footer>
-      Copyright © 2014 <a href="http://hybridgroup.com" target="blank" class="thg-logo"></a>
+      Copyright © 2015 <a href="http://hybridgroup.com" target="blank" class="thg-logo"></a>
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="/js/d3.min.js"></script>
@@ -50,7 +50,7 @@
 
           newDate.setHours(hours - offset);
 
-          return newDate;   
+          return newDate;
       }
 
       function displayTime(targetDate, clock) {
@@ -63,8 +63,8 @@
       }
 
       var clock = document.getElementById("countdown-holder")
-        , targetDate = convertUTCDateToLocalDate(new Date("1/10/2015 08:00"));
-      
+        , targetDate = convertUTCDateToLocalDate(new Date("1/10/2016 08:00"));
+
       displayTime(targetDate, clock);
       setInterval(function(){
         displayTime(targetDate, clock);
